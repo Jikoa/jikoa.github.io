@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    a:link {
+      color: blue;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    
+    a:visited {
+      color: blue;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:hover {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+
+    a:active {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+    </style>
+  <head>
+    <meta charset="utf-8">
+    <title>biography</title>
+    <link rel="icon" href="webpic.png">
+    <link href="p.css" rel="stylesheet" type="text/css">
+    
+  </head>
+  <body onload="current_time()">
+    <h1>Welcome</h1>
+    <p>Hi I'm Boru Chen<br>
+      Gratuate from <a href="https://www2.ck.tp.edu.tw/">CKHS</a><br>
+      Now study in <a href="https://web.ee.ntu.edu.tw/">NTUEE</a><br>
+      Here is my hobby<br>
+      <ul>
+        <li><a href='https://www.youtube.com/channel/UCI7ktPB6toqucpkkCiolwLg'>Piano </a></li>
+        <li><a href='https://zh.m.wikipedia.org/zh-hant/NBA'>NBA </a></li>
+        <li><a href='https://www.mos.com.tw/'>Eating </a></li>
+      </ul>
+      <img src='pig.jpg' Width='200'><br>
+      <audio src="both-of-us-14037.mp3" autoplay></audio>
+      <span id="current"></span>
+    </p>
+    
+    <script>
+      function current_time(){
+        var dt = new Date();
+        　document.getElementById("current").innerHTML =(("0"+(dt.getMonth()+1)).slice(-2)) +"-"+ (("0"+dt.getDate()).slice(-2))  +"-"+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2))+":"+ (("0"+dt.getSeconds()).slice(-2));
+      　setTimeout('current_time()',1000); 
+      }
+      </script>
+    
+  </body>
+
+</html>
